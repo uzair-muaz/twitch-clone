@@ -1,3 +1,13 @@
-export default function Home() {
-  return <p className="bg-red-400">Testing text</p>;
-}
+import { UserButton } from "@clerk/nextjs";
+import React from "react";
+
+const Home = () => {
+  return (
+    <section>
+      <div>Only Authenticated Users Can See This</div>;
+      <UserButton afterSignOutUrl="/" />
+    </section>
+  );
+};
+
+export default Home;
